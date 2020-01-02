@@ -1,0 +1,119 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+
+ /*Шрифт MuseoSlab-500 */
+@font-face {
+    font-family: 'MuseoSlab-500';
+    src: url(../fonts/MuseoSlab-500.ttf);
+    src: url(../fonts/Museo_Slab_500.otf);
+    src: url(../fonts/MuseoSansMedium.eot);
+    src: url(../fonts/MuseoSansMedium.woff);
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Переменные цвета */
+$white: #ffffff;
+$text: #7c7c7c;
+$title: #494949;
+$text-light: #c4c4c4;
+
+/* Переменные шрифты */
+$roboto: 'Roboto', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$arbutus: 'Arbutus Slab', serif;
+$museo: 'MuseoSlab-500', sans-serif;
+
+/* Переменные кнопки */
+$btn-login: #4ca3e6;
+$btn-more: linear-gradient(to right, #4f9edb, #53a0db);
+$btn-main: #66d4f4;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    font-family: $raleway;
+    line-height: 1.8571rem;
+    color: $text;
+}
+.wrap{
+    max-width: 1170px;
+    margin: 0 auto; 
+    padding: 0 15px;
+}
+
+.header{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0px 23px 0;
+    border-bottom: 1px solid $white;
+    &__logo{
+        display: block;
+        width: 168px;
+        height: 51px;
+        background: url(../img/svg/logo.svg) no-repeat;
+        margin-left: 20px;
+    }
+    &_bg{
+        background: url(../img/main-bg.jpg) no-repeat center center / cover;
+    }
+    &-list{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        font-family: $raleway;
+        text-transform: uppercase;
+        &__item{
+            margin-left: 10px;
+            transition: .3s;
+        }
+        &__link{
+            text-decoration: none;
+            color: $white;
+            font-weight: 600;
+            font-size: 1.2143rem;
+            padding: 15px 22px 15px 32px;
+            &:focus, &:hover{
+                border-radius: 10px;
+                background-color: $btn-login;
+            }
+        }
+    }
+}
+.start-block{
+    padding: 150px 0 250px 0;
+}
+.block-company{
+    max-width: 550px;
+    &__title{
+        color: $white;
+        font-family: $museo;
+        font-size: 2.8571rem;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+        white-space: pre-wrap;
+        line-height: 1.2;
+    }
+    &__text{
+        color: $white;
+        font-weight: 500;
+        font-size: 1.8571rem;
+        margin: 33px 0;
+        line-height: 2.8571rem;
+    }
+}
