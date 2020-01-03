@@ -47,6 +47,7 @@ body{
     font-family: $raleway;
     line-height: 1.8571rem;
     color: $text;
+    font-weight: 500;
 }
 .wrap{
     max-width: 1170px;
@@ -60,17 +61,17 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 45px 0px 23px 0;
+    padding: 25px 15px 28px 15px;
     border-bottom: 1px solid $white;
     &__logo{
         display: block;
         width: 168px;
         height: 51px;
         background: url(../img/svg/logo.svg) no-repeat;
-        margin-left: 20px;
+        margin-left: 30px;
     }
     &_bg{
-        background: url(../img/main-bg.jpg) no-repeat center center / cover;
+        background: url(../img/bg1.jpg) no-repeat center center / cover;
     }
     &-list{
         list-style-type: none;
@@ -88,18 +89,38 @@ body{
             font-weight: 600;
             font-size: 1.2143rem;
             padding: 15px 22px 15px 32px;
+            transition: .3s;
             &:focus, &:hover{
                 border-radius: 10px;
                 background-color: $btn-login;
+            }
+            &_login{
+                border-radius: 10px;
+                background-color: $btn-login;
+                &:focus, &:hover{
+                    border-radius: 10px;
+                    box-shadow: -10px -10px 15px  inset $white;
+                }
             }
         }
     }
 }
 .start-block{
-    padding: 150px 0 250px 0;
+    padding: 209px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    &__img{
+        display: block;
+        background-image: url(../img/img_phone.png);
+        background-size: contain ;
+        background-repeat: no-repeat;
+        width: 481px;
+        height: 694px;
+    }
 }
 .block-company{
-    max-width: 550px;
+    flex-basis: 50%;
+    margin-top: 100px;
     &__title{
         color: $white;
         font-family: $museo;
@@ -113,7 +134,180 @@ body{
         color: $white;
         font-weight: 500;
         font-size: 1.8571rem;
-        margin: 33px 0;
+        margin: 30px 0;
         line-height: 2.8571rem;
+        padding-bottom: 60px;
+    }
+    a{
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    &__google{
+        font-size: 20px;
+        background-color: $white;
+        color: #3e3e3e;
+        border-radius: 10px;
+        padding: 28px 36px 30px 81px;
+        position: relative;
+        &::before{
+            content: '';
+            background: url(../img/google_play.png) no-repeat;
+            display: block;
+            width: 30px;
+            height: 32px;
+            position: absolute;
+            top: 30%;
+            left: 15%;
+        }
+    }
+    &__more{
+        margin-left: 22px;
+        border-radius: 10px;
+        padding: 28px 65px 30px 65px;
+        color: $white;
+        background: $btn-more;/*градиент через bg  */
+        text-align: center;
+    }
+}
+.main-title{
+    font-family: $roboto;
+    font-size: 24px;
+    color: $title;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 25px;
+    span{
+        display: block;
+        text-transform: initial;
+        color: $text;
+        letter-spacing: 0.60px;
+        font-size: 18px;
+        font-weight: 400;
+
+    }
+    &::after{
+        content: '';
+        display: block;
+        border-bottom: 2px solid #2eb0ec;
+        width: 30px;
+        margin: 15px auto 100px;
+    }
+}
+.page-services{
+    background-color: $white;
+    background-size: cover;
+    padding: 90px 0 170px;
+}
+.page-services-list{
+    display: flex;
+    justify-content: space-around;
+}
+.page-services-item{
+    flex-basis: 29%;
+    text-align: center;
+    &__title{
+        color: $title;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 28px 0;
+    }
+    &_web{
+        display: block;
+        background: url(../img/icon-web.png) no-repeat;
+        width: 105px;
+        height: 106px;
+        margin: 0 auto;
+    }
+    &_foto{
+        display: block;
+        background: url(../img/icon-photo.png) no-repeat;
+        width: 105px;
+        height: 106px;
+        margin: 0 auto 0; 
+    }
+    &_vector{
+        display: block;
+        background: url(../img/Layer.png) no-repeat;
+        width: 105px;
+        height: 106px;
+        margin: 0 auto;
+    }
+    &__text{
+        letter-spacing: 0.7px;
+    }
+}
+.features{
+    background: url(../img/bg-3.jpg) no-repeat center center / cover;
+    position: relative;
+    padding: 160px 0 400px;
+    &__img{
+        position: absolute;
+        left: 0;
+        bottom: 50%; 
+        transform: translateY(50%);
+        background-image: url(../img/screen.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 2;
+        width: 665px;
+        height: 562px;
+    }
+    &_style{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__block{
+        flex-basis: 60%;
+        &_column{
+            max-width: 600px;
+        }
+        &__great{
+            font-weight: 600;
+            font-size: 22px;
+            opacity: 0.4;
+            margin-bottom: 20px;
+        }
+        &__title{
+            font-weight: 600;
+            font-size: 32px;
+            color: $title;
+            line-height: 30px;
+            margin-bottom: 25px;
+        }
+        &__subtitle{
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 60px;
+        }
+        &__list{
+            list-style-type: none;
+            &>li{
+                margin-bottom: 12px;
+                margin-left: 40px;
+            }
+        }
+        &__btn{
+            margin-top: 40px;
+            text-align: center;
+            border: none;
+            background-color: $btn-main;
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+            font-weight: 700;
+            letter-spacing: 1.1px;
+            transition: .3s;
+            a{
+                text-decoration: none;
+                color: $white;
+                text-transform: uppercase;
+            }
+            &:focus, &:hover{
+                box-shadow: 10px 15px 15px inset $btn-login;
+            }
+        }
     }
 }
