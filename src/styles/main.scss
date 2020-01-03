@@ -168,6 +168,10 @@ body{
         color: $white;
         background: $btn-more;/*градиент через bg  */
         text-align: center;
+        transition: .3s;
+        &:hover, &:hover {
+            letter-spacing: 3px;
+        }
     }
 }
 .main-title{
@@ -284,9 +288,21 @@ body{
         }
         &__list{
             list-style-type: none;
-            &>li{
+            &_dots{
                 margin-bottom: 12px;
                 margin-left: 40px;
+                &::before{
+                /* точки */
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background: #66d4f4;
+                border: 5px solid #c8ebf5;
+                border-radius: 50%;
+                margin-right: 20px;
+                vertical-align: bottom;
+                }
             }
         }
         &__btn{
@@ -300,13 +316,14 @@ body{
             font-weight: 700;
             letter-spacing: 1.1px;
             transition: .3s;
+            box-shadow: 10px 15px 15px #d5f1f8;
             a{
                 text-decoration: none;
                 color: $white;
                 text-transform: uppercase;
             }
             &:focus, &:hover{
-                box-shadow: 10px 15px 15px inset $btn-login;
+                box-shadow: 10px 15px 15px #91b6c0;
             }
         }
     }
