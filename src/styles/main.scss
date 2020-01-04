@@ -136,7 +136,7 @@ body{
         font-size: 1.8571rem;
         margin: 30px 0;
         line-height: 2.8571rem;
-        padding-bottom: 60px;
+        padding-bottom: 30px;
     }
     a{
         text-decoration: none;
@@ -150,6 +150,7 @@ body{
         border-radius: 10px;
         padding: 28px 36px 30px 81px;
         position: relative;
+        display: inline-block;
         &::before{
             content: '';
             background: url(../img/google_play.png) no-repeat;
@@ -162,6 +163,7 @@ body{
         }
     }
     &__more{
+        display: inline-block;
         margin-left: 22px;
         border-radius: 10px;
         padding: 28px 65px 30px 65px;
