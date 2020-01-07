@@ -25,6 +25,7 @@
         <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
         <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Raleway:500,600,700,800|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     </head>
     <body>
         <div class="header_bg">
@@ -143,8 +144,31 @@
             </div>
             <div class="page-slider">
                 <div class="wrap">
-                    <h2 class="main-title"><span>Get know About</span>what customer say</h2>
-                </div>
+                <h2 class="main-title"><span>Get know About</span>what customer say</h2>
+                        <div class="block-slider">
+                            <div>
+                                <div class="block-slider-ava">
+                                    <img src="../img/author.png" alt="">
+                                </div>
+                                <h3 class="block-slider__title">Sourabh B. <span>Co Founder of Mew</span> </h3>
+                                <p class="block-slider__text">Great Team with great experience, i would reguler recommended to all that you will get better support by working with this awesome team and their expert members :) </p>
+                            </div>
+                            <div>
+                                <div class="block-slider-ava">
+                                    <img src="../img/author.png" alt="">
+                                </div>
+                                <h3 class="block-slider__title">Sourabh B. <span>Co Founder of Mew</span> </h3>
+                                <p class="block-slider__text">Great Team with great experience, i would reguler recommended to all that you will get better support by working with this awesome team and their expert members :) </p>
+                            </div>
+                            <div>
+                                <div class="block-slider-ava">
+                                    <img src="../img/author.png" alt="">
+                                </div>
+                                <h3 class="block-slider__title">Sourabh B. <span>Co Founder of Mew</span> </h3>
+                                <p class="block-slider__text">Great Team with great experience, i would reguler recommended to all that you will get better support by working with this awesome team and their expert members :) </p>
+                            </div>
+                        </div>
+               </div>
             </div>
             <div class="block-resourse">
                 <div class="wrap">
@@ -283,5 +307,16 @@
                 </div>
             </footer>
      <script src="../js/main.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script  src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <script>
+    $(document).ready(function(){
+    $('.block-slider').slick({
+    prevArrow:'<button type="button" class="slick-prev">Previous</button>',
+    nextArrow:'<button type="button" class="slick-next">Next</button>'
+    });
+    });
+     </script>
     </body>
 </html>
+<!-- <img src="../img/svg/left-arrow.svg" alt=""> -->
