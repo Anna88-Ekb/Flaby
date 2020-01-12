@@ -82,6 +82,7 @@ body{
         background: url(../img/svg/logo.svg) no-repeat;
         margin-left: 30px;
         @media(max-width: 1065px){
+            margin-left: 0;
             margin-bottom: 30px;
         }
     }
@@ -294,6 +295,7 @@ body{
         position: relative;
         display: inline-block;
         margin-bottom: 30px;
+        transition: .3s;
         &::before{
             content: '';
             background: url(../img/google_play.png) no-repeat;
@@ -311,6 +313,10 @@ body{
             display: block;
             max-width: 250px;
             margin: 0 auto 30px;
+        }
+        @media(max-width:370px){
+            max-width: 200px;
+            margin-bottom: 40px;
         }
     }
     &__more{
@@ -330,6 +336,9 @@ body{
             display: block;
             margin: 0 auto;
             max-width: 250px;
+        }
+        @media(max-width:370px){
+            max-width: 200px;
         }
     }
 }
