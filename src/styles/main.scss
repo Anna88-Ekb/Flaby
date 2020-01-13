@@ -75,6 +75,12 @@ body{
             -ms-flex-direction: column;
                 flex-direction: column;
     }
+    @media(max-width: 370px){
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+    }
     &__logo{
         display: block;
         width: 168px;
@@ -295,6 +301,7 @@ body{
         position: relative;
         display: inline-block;
         margin-bottom: 30px;
+        -webkit-transition: .3s;
         transition: .3s;
         &::before{
             content: '';
@@ -447,7 +454,7 @@ body{
             background-size: 60%;
         }
         @media(max-width: 950px){
-            background-image: none;
+            display: none;
         }
     }   
     &_style{
@@ -469,7 +476,7 @@ body{
         @media(max-width: 950px){
             max-width: 750px;
             -ms-flex-preferred-size: 70%;
-                flex-basis: 70%;
+                flex-basis: 70%; 
         }
         &_column{
             max-width: 600px;
