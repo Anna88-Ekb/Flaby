@@ -91,6 +91,9 @@ body{
             margin-left: 0;
             margin-bottom: 30px;
         }
+        @media(max-width: 370px){
+            margin: 0;
+        }
     }
     &_bg{
         background: url(../img/bg1.jpg) no-repeat center center / cover;
@@ -112,6 +115,9 @@ body{
             border: 1px double $white;
             padding: 20px 20px 0;
             border-radius: 10px;
+        }
+        @media(max-width: 370px){
+            margin-top: 30px;
         }
         &__item{
             margin-left: 10px;
@@ -179,6 +185,9 @@ body{
         }
         @media(max-width: 850px ){
             display: block;
+        }
+        @media(max-width: 370px){
+            margin: 0;
         }
     }
     &-close{
